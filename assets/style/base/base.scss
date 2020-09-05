@@ -1,0 +1,79 @@
+@import "../variables/varibales";
+@import "typography";
+
+html {
+  font-family: 'Codec Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+*::selection {
+  color: $color-base-50;
+  background: $brand-primary-300;
+}
+
+
+h1, .h1 {
+  @extend %h1;
+}
+
+h2, .h2 {
+  @extend %h2;
+}
+
+h3, .h3 {
+  @extend %h3;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+.nuxt-link-active {
+  color: $brand-primary-400;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: $transition-s ease;
+
+  &[lazy=loading] {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  &[lazy=error] {
+    opacity: 0;
+  }
+
+  &[lazy=loaded] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+ul, ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    @extend %text;
+    font-size: $font-size-s;
+    position: relative;
+    padding-left: $offset-300;
+    margin-bottom: $offset-200;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: $brand-secondary-400;
+    }
+  }
+}
