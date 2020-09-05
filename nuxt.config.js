@@ -16,7 +16,8 @@ export default {
   },
   plugins: [
     '@/plugins/vue-lazyload',
-    '@/plugins/v-blur-directive'
+    '@/plugins/v-blur-directive',
+    '@/plugins/filter-to-currency'
   ],
   buildModules: [
     '@nuxtjs/eslint-module',
