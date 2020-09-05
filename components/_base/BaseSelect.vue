@@ -59,8 +59,8 @@ export default {
 }
 
 .select {
-  padding-left: 5px;
-  padding-right: 25px;
+  padding-left: $offset-50;
+  padding-right: $offset-300;
   border: none;
   color: currentColor;
   font-weight: 600;

@@ -206,7 +206,7 @@ $picture-max-height-xs: 330px;
 }
 
 .heading {
-  margin-bottom: 30px;
+  margin-bottom: $offset-400;
   @media (max-width: $screen-md) {
     margin-bottom: $offset-200;
   }
@@ -265,7 +265,7 @@ $picture-max-height-xs: 330px;
     bottom: $offset-200;
     padding: $offset-200 $offset-300;
     width: calc(100% - #{$offset-200 * 2});
-    box-shadow: 0 0 25px 0 $color-base-50;
+    box-shadow: 0 0 $offset-300 0 $color-base-50;
   }
 }
 

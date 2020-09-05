@@ -9,9 +9,9 @@
       <span :class="$style.title">{{ title }}</span>
 
       <button
-        type="button"
         :class="$style.close"
         @click="emitClose"
+        type="button"
       >
         <svg-icon
           :class="$style.closeSvg"
@@ -21,14 +21,14 @@
     </div>
 
     <div :class="$style.fields">
-      <slot name="fields"/>
+      <slot name="fields" />
     </div>
 
     <div :class="$style.actions">
       <slot name="actions">
         <base-button
-          is-fullwidth
           :disabled="!isValid"
+          is-fullwidth
         >
           <span>Complete</span>
         </base-button>

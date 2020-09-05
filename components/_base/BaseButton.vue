@@ -103,7 +103,7 @@ export default {
 
       .icon {
         background-color: $brand-primary-500;
-        box-shadow: 0 0 15px -5px $brand-primary-500;
+        box-shadow: 0 0 15px -$offset-50 $brand-primary-500;
       }
     }
 

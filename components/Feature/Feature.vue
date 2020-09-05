@@ -1,6 +1,5 @@
 <template>
   <div :class="$style.feature">
-
     <div :class="$style.icon">
       <svg-icon
         :class="$style.iconSvg"
@@ -9,10 +8,11 @@
     </div>
 
     <div :class="$style.content">
-      <h3 :class="$style.title">{{ title }}</h3>
+      <h3 :class="$style.title">
+        {{ title }}
+      </h3>
       <p>{{ description }}</p>
     </div>
-
   </div>
 </template>
 

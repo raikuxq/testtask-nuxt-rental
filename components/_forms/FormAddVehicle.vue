@@ -9,7 +9,6 @@
           title="Add new vehicle"
         >
           <template v-slot:fields>
-
             <div :class="$style.formItem">
               <base-input-file
                 v-model="photoUrl"
@@ -39,7 +38,6 @@
                 min="0"
                 step="1"
               />
-
             </div>
           </template>
         </app-form>
