@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.wrap">
+  <div :class="$style.appHeader">
     <div :class="$style.brand">
       <nuxt-link :class="$style.logo" to="/">
         <app-brand-logo />
@@ -52,7 +52,7 @@ export default {
 @import "~@/assets/style/variables/varibales.scss";
 @import "~@/assets/style/base/typography.scss";
 
-.wrap {
+.appHeader {
   display: flex;
   justify-content: space-between;
   width: 100%;

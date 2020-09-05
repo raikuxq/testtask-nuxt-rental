@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.wrap">
+  <div :class="$style.addVehicle">
     <transition name="t-slide-right" appear>
       <div :class="$style.inner">
         <app-form
@@ -105,7 +105,7 @@ export default {
 <style lang="scss" module>
 @import "~@/assets/style/form/input.scss";
 
-.wrap {
+.addVehicle {
   position: relative;
   display: flex;
   align-items: center;

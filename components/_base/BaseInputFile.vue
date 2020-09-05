@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.wrap">
+  <div :class="$style.inputFile">
     <input
       :class="$style.input"
       v-bind="$attrs"
@@ -55,7 +55,7 @@ export default {
 @import "~@/assets/style/form/input.scss";
 @import "~@/assets/style/utils/positioning.scss";
 
-.wrap {
+.inputFile {
   @extend %input;
   position: relative;
   display: flex;

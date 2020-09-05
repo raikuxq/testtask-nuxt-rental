@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.wrap">
+  <div :class="$style.profile">
     <div :class="$style.name">
       <span :class="$style.nameText">Bessie Cooper</span>
     </div>
@@ -29,7 +29,7 @@ export default {
 @import "~@/assets/style/variables/varibales.scss";
 @import "~@/assets/style/base/typography.scss";
 
-.wrap {
+.profile {
   display: flex;
   align-items: center;
 }

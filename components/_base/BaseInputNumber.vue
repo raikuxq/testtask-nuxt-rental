@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.wrap">
+  <div :class="$style.inputNumber">
     <input
       :class="$style.input"
       v-bind="$attrs"
@@ -36,7 +36,7 @@ export default {
 <style lang="scss" module>
 @import "~@/assets/style/form/input.scss";
 
-.wrap {
+.inputNumber {
   position: relative;
 }
 

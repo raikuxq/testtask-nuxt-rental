@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.wrap">
+  <div :class="$style.wrapSelect">
     <select
       :class="$style.select"
       @change="emitSelect"
@@ -46,7 +46,7 @@ export default {
 @import "~@/assets/style/base/typography.scss";
 @import "~@/assets/style/utils/positioning.scss";
 
-.wrap {
+.wrapSelect {
   position: relative;
   display: flex;
   align-items: center;

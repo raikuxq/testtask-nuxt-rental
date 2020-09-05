@@ -1,8 +1,9 @@
 <template>
   <form
     :class="$style.form"
-    @submit.prevent="emitSubmit"
     v-on-clickaway="emitClose"
+    @keyup.esc.prevent="emitClose"
+    @submit.prevent="emitSubmit"
   >
     <div :class="$style.header">
       <span :class="$style.title">{{ title }}</span>
