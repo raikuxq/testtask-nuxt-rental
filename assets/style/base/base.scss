@@ -6,6 +6,19 @@ html {
   Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
+body {
+  background: $color-base-0;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    background: $color-base-50;
+
+    &-thumb {
+      background: $color-base-100;
+    }
+  }
+}
+
 *::selection {
   color: $color-base-50;
   background: $brand-primary-300;
@@ -65,6 +78,7 @@ ul, ol {
     position: relative;
     padding-left: $offset-300;
     margin-bottom: $offset-200;
+
     &:before {
       content: '';
       position: absolute;
