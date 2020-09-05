@@ -57,7 +57,6 @@ export default {
   border: none;
 
   border-radius: $border-radius-xs;
-  font-weight: 600;
   text-decoration: none;
   cursor: pointer;
   user-select: none;
@@ -67,18 +66,23 @@ export default {
     width: 100%;
   }
 
+  &:disabled {
+    cursor: default;
+    opacity: 0.65;
+  }
+
   // default button
   &:not(.isSeparated) {
     padding: $offset-200 $offset-400;
     @media (max-width: $screen-md) {
-      padding: $offset-100 $offset-300;
+      padding: $offset-200 $offset-300;
     }
 
     background-color: $brand-primary-400;
     color: #ffffff;
     transition: $transition-s;
 
-    &:hover {
+    &:hover:enabled {
       background-color: $brand-primary-500;
     }
 
@@ -94,7 +98,7 @@ export default {
     color: $brand-primary-400;
     background: none;
 
-    &:hover {
+    &:hover:enabled {
       color: $brand-primary-500;
 
       .icon {
@@ -113,9 +117,11 @@ export default {
     }
 
     .text {
+      font-size: $font-size-l;
       margin: 0 $offset-150;
       @media (max-width: $screen-md) {
         margin: 0;
+        font-size: $font-size-m;
       }
     }
 
@@ -142,9 +148,13 @@ export default {
   display: inline-block;
   padding: 0 $offset-100;
   font-size: $font-size-m;
+  font-weight: 600;
   line-height: 1;
   color: currentColor;
   transition: $transition-s;
+  @media (max-width: $screen-md) {
+    font-size: $font-size-s;
+  }
 }
 
 .iconSvg {

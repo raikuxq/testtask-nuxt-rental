@@ -60,7 +60,7 @@ export default {
 
 .select {
   padding-left: 5px;
-  padding-right: 35px;
+  padding-right: 25px;
   border: none;
   color: currentColor;
   font-weight: 600;
@@ -87,8 +87,8 @@ export default {
 .arrow {
   @extend %center-y-absolute;
   right: 0;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   pointer-events: none;
   @media (max-width: $screen-md) {
     width: 16px;

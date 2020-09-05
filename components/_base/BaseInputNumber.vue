@@ -6,10 +6,8 @@
       @input="emitInput"
       type="number"
       inputmode="numeric"
-    />
-    <span :class="$style['label']">
-      {{ label }}
-    </span>
+    >
+    <span :class="$style.label">{{ label }}</span>
   </div>
 </template>
 
