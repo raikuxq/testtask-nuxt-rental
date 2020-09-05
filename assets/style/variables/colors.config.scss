@@ -1,0 +1,43 @@
+:root {
+  --brand-primary-100: #D1D5FF;
+  --brand-primary-200: #A4ACFF;
+  --brand-primary-300: #7682FF;
+  --brand-primary-400: #4959FF;
+  --brand-primary-500: #1B2FFF;
+  --brand-primary-600: #1626CC;
+  --brand-primary-700: #101C99;
+  --brand-primary-800: #0B1366;
+  --brand-primary-900: #050933;
+  --brand-secondary-100: #FDD2EC;
+  --brand-secondary-200: #FCA5D9;
+  --brand-secondary-300: #FA77C6;
+  --brand-secondary-400: #F84AB3;
+  --brand-secondary-500: #F71D9F;
+  --brand-secondary-600: #C51780;
+  --brand-secondary-700: #941160;
+  --brand-secondary-800: #630C40;
+  --brand-secondary-900: #310620;
+  --color-base-0: #ffffff;
+  --color-base-50: #F3F4F7;
+  --color-base-100: #CCD3DA;
+  --color-base-200: #99A7B5;
+  --color-base-300: #677B8F;
+  --color-base-400: #344F6A;
+  --color-base-500: #012345;
+  --color-base-600: #011C37;
+  --color-base-700: #011529;
+  --color-base-800: #000E1C;
+  --color-base-900: #00070E;
+}
+
+// revert colors
+.dark-mode {
+  --color-base-0:  #011C37;
+  --color-base-50: #012345;
+  --color-base-100: #344F6A;
+  --color-base-200: #677B8F;
+  --color-base-300: #99A7B5;
+  --color-base-400: #CCD3DA;
+  --color-base-500: #F3F4F7;
+  --color-base-600: #ffffff;
+}
