@@ -1,0 +1,13 @@
+@mixin gridItem($count, $gap) {
+  flex-basis: calc(100% / #{$count} - #{$gap - $gap / $count});
+  margin: 0 $gap $gap 0;
+  &:nth-child(#{$count}n) { margin-right: 0;}
+  &:nth-last-of-type(-n + #{$count}) { margin-bottom: 0; }
+}
+
+@mixin gridContainer() {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
