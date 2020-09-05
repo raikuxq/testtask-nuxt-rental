@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" module>
 @import "~@/assets/style/variables/varibales.scss";
-@import "~assets/style/base/typography.scss";
+@import "~@/assets/style/base/typography.scss";
 
 .button {
   position: relative;
