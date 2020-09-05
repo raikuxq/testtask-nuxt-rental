@@ -1,0 +1,67 @@
+@import "~@/assets/style/variables/varibales.scss";
+@import "~assets/style/base/typography.scss";
+@import "~@/assets/style/utils/positioning.scss";
+
+%input {
+  @extend %text;
+  width: 100%;
+  padding: $offset-200 $offset-300;
+
+  border: none;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+
+  font-size: $font-size-s;
+  color: $color-base-400;
+  background: $color-base-50;
+  border-radius: $border-radius-s;
+  transition: $transition-s ease;
+
+  @media (max-width: $screen-md) {
+    font-size: $font-size-s;
+  }
+
+  &::placeholder {
+    color: $color-base-200;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px $color-base-100;
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px $color-base-200;
+  }
+
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+}
+
+%input-label {
+  @extend %center-y-absolute;
+  @extend %text;
+  right: $offset-300;
+  font-size: $font-size-s;
+  @media (max-width: $screen-md) {
+    font-size: $font-size-s;
+  }
+}
+
+%form-input {
+  margin-bottom: $offset-300;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media (max-width: $screen-md) {
+    margin-bottom: $offset-200;
+  }
+}
