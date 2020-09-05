@@ -91,3 +91,8 @@ ul, ol {
     }
   }
 }
+
+p {
+  @extend %text;
+  font-size: $font-size-s;
+}
