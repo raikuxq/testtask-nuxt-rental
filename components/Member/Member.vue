@@ -1,0 +1,85 @@
+<template>
+  <div :class="$style.member">
+    <div :class="$style.picture">
+      <img :class="$style.pictureImg" v-lazy="imageUrl">
+    </div>
+    <div :class="$style.info">
+      <div :class="$style.name">
+        <h3>{{ name }}</h3>
+      </div>
+      <div :class="$style.description">
+        <p>{{ jobTitle }}</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Member',
+  props: {
+    name: {
+      type: String,
+      required: true
+    },
+    jobTitle: {
+      type: String,
+      required: true
+    },
+    imageUrl: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
+
+<style lang="scss" module>
+@import "~@/assets/style/variables/varibales.scss";
+@import "~@/assets/style/base/typography.scss";
+
+$max-pic-height: 96px;
+$max-pic-width: 162px;
+$max-pic-height-adaptive: 80px;
+$max-pic-width-adaptive: 132px;
+
+.member {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $screen-md) {
+    flex-direction: row;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $screen-md) {
+    padding: $offset-200 0;
+  }
+}
+
+.picture {
+  width: 100%;
+  height: $max-pic-height;
+  margin-bottom: $offset-200;
+  overflow: hidden;
+  border-radius: $border-radius-s;
+  background-color: $color-base-50;
+  @media (max-width: $screen-md) {
+    max-width: $max-pic-width-adaptive;
+    max-height: $max-pic-height-adaptive;
+    margin-bottom: 0;
+    margin-right: $offset-200;
+  }
+}
+
+.pictureImg {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.name {
+  margin-bottom: $offset-100;
+}
+</style>
