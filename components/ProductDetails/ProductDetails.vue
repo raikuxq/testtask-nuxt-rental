@@ -13,13 +13,13 @@
 
       <div :class="$style.info">
         <div :class="$style.infoNav">
-          <nuxt-link :class="$style.tab" :to="subLinkSpecs">
+          <nuxt-link :class="$style.tab" :to="subLinkSpecs" v-blur>
             Specifications
           </nuxt-link>
-          <nuxt-link :class="$style.tab" :to="subLinkTeam">
+          <nuxt-link :class="$style.tab" :to="subLinkTeam" v-blur>
             Team
           </nuxt-link>
-          <nuxt-link :class="$style.tab" :to="subLinkTerms">
+          <nuxt-link :class="$style.tab" :to="subLinkTerms" v-blur>
             Rent terms
           </nuxt-link>
         </div>

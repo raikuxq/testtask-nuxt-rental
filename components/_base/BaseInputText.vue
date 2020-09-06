@@ -6,7 +6,7 @@
       @input="emitInput"
       type="text"
     >
-    <span :class="$style['label']">{{ label }}</span>
+    <span :class="$style.label">{{ label }}</span>
   </div>
 </template>
 
