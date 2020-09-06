@@ -1,6 +1,8 @@
 # rent-car-nuxt-app
 
-> Simple car rental website using Nuxt
+> Built with Nuxt + CSS Modules
+>
+> Live: [https://pepelane.antaresx.host](https://pepelane.antaresx.host)
 
 ## Build Setup
 

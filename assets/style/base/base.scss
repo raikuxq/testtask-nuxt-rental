@@ -89,6 +89,7 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   &[lazy=loaded] {
     animation: a-lazy-image $transition-s ease;
   }

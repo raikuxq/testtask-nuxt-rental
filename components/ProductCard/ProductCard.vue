@@ -86,7 +86,10 @@ $picture-size: 88px;
   &:hover,
   &:focus {
     outline: none;
-    box-shadow: 0 0 35px -20px $color-base-300;
+    box-shadow: 0 0 35px -20px $color-base-200;
+    @media (min-width: $screen-lg) {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -123,7 +126,7 @@ $picture-size: 88px;
   background-color: $color-base-50;
   border-radius: $border-radius-m;
   @media (max-width: $screen-md) {
-    border-right: $border-radius-s;
+    border-radius: $border-radius-s;
   }
 }
 </style>

@@ -83,6 +83,7 @@ $header-offset: $offset-500;
 
 .main {
   position: relative;
+  flex-grow: 1;
   min-height: calc(100vh - #{$header-size + $header-offset + $offset-600 * 2});
 }
 

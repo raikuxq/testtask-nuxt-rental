@@ -86,7 +86,7 @@ export default {
       background-color: $brand-primary-500;
     }
 
-    &:focus {
+    &:focus:enabled {
       outline: none;
       background-color: $brand-primary-600;
     }
@@ -96,6 +96,7 @@ export default {
   &.isSeparated {
     padding: 0;
     color: $brand-primary-400;
+    border-radius: 0;
     background: none;
 
     &:hover:enabled {
@@ -107,7 +108,7 @@ export default {
       }
     }
 
-    &:focus {
+    &:focus:enabled {
       color: $brand-primary-600;
       outline: none;
 

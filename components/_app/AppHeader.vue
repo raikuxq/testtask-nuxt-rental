@@ -112,6 +112,7 @@ export default {
   margin-left: $offset-50;
   margin-right: $offset-300;
   @media (max-width: $screen-xl) {
+    margin-left: 0;
     margin-right: $offset-300;
   }
 }

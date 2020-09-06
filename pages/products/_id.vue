@@ -26,7 +26,7 @@ import testTerms from '@/api/terms.json'
 
 export default {
   name: 'PageProduct',
-  scrollToTop: true,
+  scrollToTop: false,
   components: {
     ProductDetails
   },
@@ -51,21 +51,12 @@ export default {
     getTeam: () => testTeam,
     getTerms: () => testTerms
   },
-  async beforeMount () {
-    try {
-      await this.setActiveId(this.$route.params.id)
-
-      if (!this.getActiveVehicle) {
-        await this.fetchVehicles()
-      }
-
-      this.title = this.getActiveVehicle.name
-    } catch (e) {
-      this.$nuxt.error({})
-    }
+  beforeMount () {
+    this.initData()
+    this.handleScroll()
   },
-  async beforeDestroy () {
-    await this.setActiveId(null)
+  beforeDestroy () {
+    this.setActiveId(null)
   },
   beforeRouteEnter (from, to, next) {
     /**
@@ -80,7 +71,25 @@ export default {
     ...mapActions('vehicles', [
       'setActiveId',
       'fetchVehicles'
-    ])
+    ]),
+    async initData () {
+      try {
+        await this.setActiveId(this.$route.params.id)
+
+        if (!this.getActiveVehicle) {
+          await this.fetchVehicles()
+        }
+
+        this.title = this.getActiveVehicle.name
+      } catch (e) {
+        this.$nuxt.error({})
+      }
+    },
+    handleScroll () {
+      if (process.client) {
+        window.scrollTo(0, 0)
+      }
+    }
   }
 }
 </script>

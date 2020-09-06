@@ -75,7 +75,9 @@ export default {
   }
 
   .button.hasText & {
-    margin: 0 $offset-200;
+    @media (min-width: $screen-xl-min) {
+      margin: 0 $offset-200;
+    }
   }
 }
 
