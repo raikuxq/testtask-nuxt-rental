@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 import ProductList from '@/components/ProductList/ProductList'
 import ProductFilter from '@/components/ProductFilter/ProductFilter'
 import WidgetAddProduct from '@/components/_widgets/WidgetAddProduct'
@@ -48,23 +48,18 @@ export default {
       'getAllTypes'
     ]),
     isListNotEmpty () {
-      return this.getFilteredVehicles?.length > 0
+      return this.getFilteredVehicles?.length > 0 || false
     },
     isTypesNotEmpty () {
-      return this.getAllTypes?.length > 0
+      return this.getAllTypes?.length > 0 || false
     }
   },
-  async beforeMount () {
+  async middleware ({ store, error }) {
     try {
-      await this.fetchVehicles()
+      await store.dispatch('vehicles/fetchVehicles')
     } catch (e) {
-      this.$nuxt.error({})
+      error({})
     }
-  },
-  methods: {
-    ...mapActions('vehicles', [
-      'fetchVehicles'
-    ])
   }
 }
 </script>

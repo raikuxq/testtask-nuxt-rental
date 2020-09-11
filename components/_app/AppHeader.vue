@@ -83,6 +83,7 @@ export default {
   transition: $transition-s ease;
   &:hover {
     opacity: 0.8;
+    cursor: pointer;
   }
   @media (max-width: $screen-md) {
     max-width: 115px;

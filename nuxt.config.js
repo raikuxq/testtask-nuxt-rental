@@ -2,17 +2,17 @@ import { defaultPlugins } from './webpack/svgo.config'
 
 export default {
   mode: 'universal',
-  htmlAttrs: {
-    lang: 'en'
-  },
   head: {
     title: process.env.npm_package_name || 'Rental vehicles | Pepelane',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' },
       { httpEquiv: 'x-ua-compatible', content: 'ie-edge' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
-    ]
+      { hid: 'description', name: 'description', content: 'Rental vehicles' }
+    ],
+    htmlAttrs: {
+      lang: 'en'
+    }
   },
   plugins: [
     '@/plugins/vue-lazyload',

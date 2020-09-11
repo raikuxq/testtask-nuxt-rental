@@ -8,9 +8,9 @@
     </div>
 
     <div :class="$style.content">
-      <h3 :class="$style.title">
-        {{ title }}
-      </h3>
+      <div :class="$style.title">
+        <h3>{{ title }}</h3>
+      </div>
       <p>{{ description }}</p>
     </div>
   </div>

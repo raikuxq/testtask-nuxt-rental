@@ -3,6 +3,7 @@
     :icon="getIcon"
     :text="getText"
     @click.native="changeTheme"
+    aria-label="Toggle theme"
   />
 </template>
 

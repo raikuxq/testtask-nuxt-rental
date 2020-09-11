@@ -42,7 +42,13 @@ $gap-desktop: $offset-400;
 $gap-mobile: $offset-150;
 
 .list {
-  @include gridContainer();
+  @media (min-width: $screen-lg-min) {
+    @include gridContainer($gap-desktop)
+  }
+
+  @media (max-width: $screen-lg) {
+    @include gridContainer($gap-mobile)
+  }
 }
 
 .listItem {

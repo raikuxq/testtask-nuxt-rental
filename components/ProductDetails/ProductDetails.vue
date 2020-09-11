@@ -44,7 +44,10 @@
         </div>
 
         <div :class="$style.actionBtn">
-          <base-button @click.native="requestProduct">
+          <base-button
+            @click.native="requestProduct"
+            aria-label="Details"
+          >
             <span>Rent now</span>
           </base-button>
         </div>
@@ -285,12 +288,4 @@ $picture-max-height-xs: 330px;
   color: $brand-secondary-400;
 }
 
-</style>
-
-<style lang="scss">
-@import "~@/assets/style/variables/varibales.scss";
-
-.nuxt-link-active {
-  color: $brand-primary-400;
-}
 </style>

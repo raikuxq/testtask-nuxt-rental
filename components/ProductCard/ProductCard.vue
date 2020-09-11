@@ -6,7 +6,7 @@
 
     <div :class="$style.content">
       <div :class="$style.title">
-        <h3>{{ title }}</h3>
+        <span :class="$style.titleText">{{ title }}</span>
       </div>
 
       <div :class="$style.description">
@@ -95,6 +95,10 @@ $picture-size: 88px;
 
 .title {
   margin-bottom: $offset-150;
+}
+
+.titleText {
+  @extend %h3;
 }
 
 .content {

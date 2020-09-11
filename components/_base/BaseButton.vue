@@ -1,10 +1,10 @@
 <template>
-  <button :class="[$style.button, ...getModifiers]" v-blur>
-    <span :class="$style.text">
+  <button :class="[$style.button, ...getModifiers]" v-blur v-bind="$attrs">
+    <span :class="$style.text" aria-hidden="true">
       <slot />
     </span>
 
-    <span :class="$style.icon" v-if="icon">
+    <span :class="$style.icon" v-if="icon" aria-hidden="true">
       <svg-icon :class="$style.iconSvg" :name="icon" />
     </span>
   </button>
@@ -153,9 +153,14 @@ export default {
   line-height: 1;
   color: currentColor;
   transition: $transition-s;
+  pointer-events: none;
   @media (max-width: $screen-md) {
     font-size: $font-size-s;
   }
+}
+
+.icon {
+  pointer-events: none;
 }
 
 .iconSvg {

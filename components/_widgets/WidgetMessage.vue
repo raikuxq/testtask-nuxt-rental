@@ -2,6 +2,7 @@
   <base-icon-button
     @click.native="openMessages"
     icon="message.svg"
+    aria-label="Open messages"
   />
 </template>
 

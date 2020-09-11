@@ -1,10 +1,10 @@
 <template>
-  <button :class="[$style.button, ...getModifiers]" v-blur>
+  <button :class="[$style.button, ...getModifiers]" v-blur v-bind="$attrs">
     <svg-icon
       :class="$style.icon"
       :name="icon"
     />
-    <span :class="$style.text">{{ text }}</span>
+    <span :class="$style.text" aria-hidden="true">{{ text }}</span>
   </button>
 </template>
 

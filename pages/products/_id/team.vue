@@ -63,8 +63,15 @@ $gap-mobile: $offset-150;
 $max-item-width: 162px;
 
 .list {
-  @include gridContainer();
-  justify-content: flex-start;
+  @media (min-width: $screen-md-min){
+    @include gridContainer($gap-desktop);
+    justify-content: flex-start;
+  }
+
+  @media (max-width: $screen-md) {
+    @include gridContainer($gap-mobile);
+    justify-content: flex-start;
+  }
 }
 
 .listItem {

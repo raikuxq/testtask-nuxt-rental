@@ -29,6 +29,7 @@
         <base-button
           :disabled="!isValid"
           is-fullwidth
+          aria-label="Complete"
         >
           <span>Complete</span>
         </base-button>

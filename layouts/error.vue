@@ -10,6 +10,7 @@
           <span :class="$style.message">Go back to the homepage:</span>
           <base-button
             @click.native="goToHomePage"
+            aria-label="Homepage"
           >
             <span>Homepage</span>
           </base-button>
@@ -19,6 +20,7 @@
           <span :class="$style.message">Please refresh the page</span>
           <base-button
             @click.native="refreshPage"
+            aria-label="Reload page"
           >
             <span>Reload page</span>
           </base-button>

@@ -2,6 +2,7 @@
   <base-icon-button
     @click.native="openNotifications"
     icon="notify.svg"
+    aria-label="Open notifications"
   />
 </template>
 

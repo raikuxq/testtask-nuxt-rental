@@ -3,6 +3,7 @@
     @click.native="openFormAddVehicle"
     icon="plus"
     is-separated-icon
+    aria-label="Add product"
   >
     <span>Add new</span>
   </base-button>
