@@ -289,3 +289,15 @@ $picture-max-height-xs: 330px;
 }
 
 </style>
+
+<style lang="scss">
+@import "~@/assets/style/variables/varibales.scss";
+
+.nuxt-link-active {
+  color: $brand-primary-400;
+  &:hover {
+    color: $brand-primary-400;
+    cursor: default;
+  }
+}
+</style>
