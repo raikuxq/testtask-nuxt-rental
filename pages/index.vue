@@ -19,9 +19,7 @@
         </transition>
       </div>
 
-      <transition name="t-slide-up" appear>
-        <product-list :items="getFilteredVehicles" />
-      </transition>
+      <product-list :items="getFilteredVehicles" />
     </div>
   </transition>
 </template>

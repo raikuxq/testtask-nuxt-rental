@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.appHeader">
     <div :class="$style.brand">
-      <nuxt-link :class="$style.logo" to="/">
+      <nuxt-link id="logo" :class="$style.logo" to="/">
         <app-brand-logo />
       </nuxt-link>
       <span :class="$style.title">World's first affordable airsharing</span>
