@@ -5,6 +5,9 @@
   from {
     opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
 }
 
 html {
@@ -99,7 +102,12 @@ img {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border: none;
+  outline: none;
+  background-color: $color-base-50;
+  opacity: 0;
   &[lazy=loaded] {
     animation: a-lazy-image $transition-m ease-in;
+    animation-fill-mode: forwards;
   }
 }

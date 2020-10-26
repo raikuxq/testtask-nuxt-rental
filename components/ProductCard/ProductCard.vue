@@ -121,13 +121,13 @@ $picture-size: 88px;
 }
 
 .picture {
-  max-width: $picture-size;
-  min-width: $picture-size;
+  flex: 0 0 $picture-size;
   height: $picture-size;
   overflow: hidden;
   margin-right: $offset-300;
   transition: $transition-s ease;
   background-color: $color-base-50;
+  border: none;
   border-radius: $border-radius-m;
   @media (max-width: $screen-md) {
     border-radius: $border-radius-s;
