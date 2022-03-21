@@ -1,7 +1,8 @@
 import { defaultPlugins } from './webpack/svgo.config'
 
 export default {
-  mode: 'universal',
+  ssr: false,
+  target: 'static',
   head: {
     title: process.env.npm_package_name || 'Rental vehicles | Pepelane',
     meta: [
