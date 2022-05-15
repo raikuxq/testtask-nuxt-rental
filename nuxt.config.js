@@ -37,32 +37,21 @@ export default {
     svgoConfig () {
       return {
         plugins: [function () {
-          export function defaultPlugins () {
-            // Enable removeAttrs plugin
-            // Remove id attribute to prevent conflict with our id
-            removeAttrs.active = true
-            removeAttrs.params.attrs = 'svg:id'
+          removeAttrs.active = true
+          removeAttrs.params.attrs = 'svg:id'
+          removeViewBox.active = false
+          removeDimensions.active = true
+          inlineStyles.active = true
+          inlineStyles.params.onlyMatchedOnce = false
 
-            // Disable removeViewBox plugin and enable removeDimensions
-            // Keep viewBox and remove width & height attribute
-            removeViewBox.active = false
-            removeDimensions.active = true
-
-            // Make all styles inline
-            // By definition, a defs sprite is not usable as a CSS sprite
-            inlineStyles.active = true
-            inlineStyles.params.onlyMatchedOnce = false
-
-            return [
-              removeDimensions,
-              cleanupIDs,
-              removeAttrs,
-              removeViewBox,
-              inlineStyles,
-              { inlineDefs } // NOTE: it's important to pass custom plugins as object.
-            ]
-          }
-
+          return [
+            removeDimensions,
+            cleanupIDs,
+            removeAttrs,
+            removeViewBox,
+            inlineStyles,
+            { inlineDefs }
+          ]
         }]
       }
     }
