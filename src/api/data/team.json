@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Marvin McKinney",
+    "job_title": "Pilot assistant",
+    "photo": "/images/1.jpg"
+  },
+  {
+    "name": "Savannah Nguyen",
+    "job_title": "Mechanic",
+    "photo": "/images/2.jpg"
+  },
+  {
+    "name": "Courtney Henry",
+    "job_title": "Stewardess",
+    "photo": "/images/3.jpg"
+  }
+]
