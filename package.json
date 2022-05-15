@@ -12,6 +12,7 @@
     "maintained node versions"
   ],
   "dependencies": {
+    "@nuxtjs/svg-sprite": "^0.4.11",
     "esm": "^3.2.25",
     "glob": "7.2.0",
     "normalize.css": "^8.0.1",
@@ -19,15 +20,14 @@
     "portal-vue": "^2.1.7",
     "vue-clickaway": "^2.2.2",
     "vue-lazyload": "^1.3.3",
-    "vue-svgicon": "^4.0.1-alpha.0"
+    "vue-svgicon": "^4.0.1-alpha.0",
+    "svgo": "^1.3.2"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.4",
     "@nuxtjs/color-mode": "^1.0.3",
-    "@nuxtjs/svg-sprite": "^0.4.11",
     "@nuxtjs/vercel-builder": "^0.22.1",
     "sass": "^1.49.0",
-    "sass-loader": "^10.0.1",
-    "svgo": "^1.3.2"
+    "sass-loader": "^10.0.1"
   }
 }
