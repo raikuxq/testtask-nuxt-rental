@@ -1,8 +1,8 @@
 import { defaultPlugins } from './webpack/svgo.config'
 
 export default {
-  ssr: false,
-  target: 'static',
+  ssr: true,
+  target: 'server',
   head: {
     title: process.env.npm_package_name || 'Rental vehicles | Pepelane',
     meta: [
@@ -15,30 +15,19 @@ export default {
       lang: 'en'
     }
   },
+  srcDir: 'src',
   plugins: [
     '@/plugins/vue-lazyload',
     '@/plugins/v-blur-directive',
     '@/plugins/filter-to-currency'
   ],
   buildModules: [
-    '@nuxtjs/eslint-module',
     '@nuxtjs/color-mode'
   ],
   modules: [
     '@nuxtjs/svg-sprite',
-    'nuxt-polyfill'
+    'portal-vue/nuxt'
   ],
-  polyfill: {
-    features: [
-      {
-        require: 'ie11-custom-properties'
-      },
-      {
-        require: 'svg4everybody',
-        install: svg4everybody => svg4everybody()
-      }
-    ]
-  },
   svgSprite: {
     svgoConfig () {
       return {
