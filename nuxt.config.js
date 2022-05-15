@@ -36,7 +36,7 @@ export default {
   svgSprite: {
     svgoConfig () {
       return {
-        plugins: [function () {
+        plugins: [(function () {
           removeAttrs.active = true
           removeAttrs.params.attrs = 'svg:id'
           removeViewBox.active = false
@@ -52,7 +52,7 @@ export default {
             inlineStyles,
             { inlineDefs }
           ]
-        }]
+        })()]
       }
     }
   },
