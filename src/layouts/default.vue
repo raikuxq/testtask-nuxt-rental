@@ -13,7 +13,7 @@
 
     <transition name="t-fade">
       <div :class="$style.modals" v-if="isAnyModalActive">
-        <portal-target name="modal" />
+        <portal-target name="modal" :class="$style.modalsInner" />
       </div>
     </transition>
 
@@ -98,6 +98,10 @@ $header-offset: $offset-500;
   background: rgba(52, 79, 106, 0.32);
   backdrop-filter: blur(32px);
   overflow-x: hidden;
+}
+
+.modalsInner {
+  height: 100%;
 }
 
 </style>
