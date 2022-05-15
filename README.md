@@ -1,8 +1,6 @@
 # rent-car-nuxt-app
 
 > Built with Nuxt + CSS Modules
->
-> Live: [https://pepelane.antaresx.host](https://pepelane.antaresx.host)
 
 ## Build Setup
 
