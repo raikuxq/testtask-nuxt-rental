@@ -23,7 +23,6 @@ export default {
   srcDir: 'src',
   plugins: [
     '@/plugins/vue-lazyload',
-    '@/plugins/v-blur-directive',
     '@/plugins/filter-to-currency'
   ],
   buildModules: [
@@ -74,7 +73,7 @@ export default {
     color: '#1B2FFF'
   },
   colorMode: {
-    preference: 'system', // default value of $colorMode.preference
+    preference: 'system',
     fallback: 'light'
   }
 }
