@@ -12,7 +12,7 @@
         v-for="feature in specificationsFeatures"
         :key="feature.title"
       >
-        <feature
+        <product-details-feature
           :title="feature.title"
           :description="feature.description"
           :icon="feature.icon"
@@ -23,12 +23,12 @@
 </template>
 
 <script>
-import Feature from '@/components/partials/Feature/Feature'
+import ProductDetailsFeature from '@/components/partials/ProductDetailsFeature/ProductDetailsFeature'
 
 export default {
   name: 'SubRouteSpecifications',
   components: {
-    Feature
+    ProductDetailsFeature,
   },
   props: {
     specificationsDescription: {

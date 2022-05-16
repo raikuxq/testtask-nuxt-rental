@@ -4,7 +4,7 @@
       <p>{{ termsDescription }}</p>
     </div>
 
-    <div :class="$style.conditions" v-if="termsConditions.length">
+    <div :class="$style.conditions" v-if="hasConditions">
       <h2>Additional conditions:</h2>
       <ul>
         <li v-for="condition in termsConditions">
@@ -27,6 +27,11 @@ export default {
       type: Array || null,
       required: false,
       default: null
+    }
+  },
+  computed: {
+    hasConditions() {
+      return this.termsConditions?.length > 0;
     }
   }
 }

@@ -1,14 +1,6 @@
 @import "../variables/varibales";
 @import "typography";
-
-@keyframes a-lazy-image {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+@import "../vue/animations";
 
 html {
   font-family: 'Codec Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -52,6 +44,7 @@ h3, .h3 {
 
 a {
   text-decoration: none;
+  color: currentColor;
 }
 
 a:hover {
@@ -64,10 +57,6 @@ a:hover {
     color: $brand-primary-400;
     cursor: default;
   }
-}
-
-#logo {
-  cursor: pointer;
 }
 
 ul, ol {
@@ -110,7 +99,7 @@ img {
   background-color: $color-base-50;
   opacity: 0;
   &[lazy=loaded] {
-    animation: a-lazy-image $transition-m ease-in;
+    animation: a-lazy-image $transition-s ease-in-out;
     animation-fill-mode: forwards;
   }
 }

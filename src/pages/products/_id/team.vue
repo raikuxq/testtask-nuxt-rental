@@ -13,7 +13,7 @@
           v-for="member in teamMembers"
           :key="member.name"
         >
-          <member
+          <product-details-member
             :name="member.name"
             :image-url="member.photo"
             :job-title="member.job_title"
@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import Member from '@/components/partials/Member/Member'
 
+import ProductDetailsMember from '@/components/partials/ProductDetailsMember/ProductDetailsMember'
 export default {
   name: 'SubRouteTeam',
   components: {
-    Member
+    ProductDetailsMember,
   },
   props: {
     teamDescription: {

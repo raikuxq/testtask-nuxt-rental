@@ -32,16 +32,4 @@ export default {
 }
 </script>
 
-<style lang="scss" module>
-@import "~@/assets/style/form/input.scss";
-
-.inputText {
-  position: relative;
-}
-.input {
-  @extend %input;
-}
-.label {
-  @extend %input-label;
-}
-</style>
+<style lang="scss" src="./BaseInputText.scss" module />

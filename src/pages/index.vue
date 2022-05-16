@@ -26,8 +26,8 @@
 <script>
 import { mapGetters } from 'vuex'
 import ProductList from '@/components/partials/ProductList/ProductList'
-import ProductFilter from '@/components/partials/ProductFilter/ProductFilter'
-import WidgetAddProduct from '@/components/widgets/WidgetAddProduct/WidgetAddProduct'
+import ProductFilter from '@/components/partials/ProductListFilter/ProductListFilter'
+import WidgetAddProduct from '@/components/shared/WidgetAddProduct/WidgetAddProduct'
 import FormAddVehicle from '@/components/partials/VehicleAddForm/VehicleAddForm'
 
 export default {

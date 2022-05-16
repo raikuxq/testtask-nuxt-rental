@@ -34,39 +34,4 @@ export default {
 }
 </script>
 
-<style lang="scss" module>
-@import "~@/assets/style/variables/varibales.scss";
-@import "~@/assets/style/utils/grid.scss";
-
-$gap-desktop: $offset-400;
-$gap-mobile: $offset-150;
-
-.list {
-  @media (min-width: $screen-lg-min) {
-    @include gridContainer($gap-desktop)
-  }
-
-  @media (max-width: $screen-lg) {
-    @include gridContainer($gap-mobile)
-  }
-}
-
-.listItem {
-  @media (min-width: $screen-xxl-min) {
-    @include gridItem(4, $gap-desktop)
-  }
-
-  @media (min-width: $screen-lg-min) and (max-width: $screen-xxl) {
-    @include gridItem(3, $gap-desktop)
-  }
-
-  @media (min-width: $screen-sm-min) and (max-width: $screen-lg) {
-    @include gridItem(2, $gap-mobile)
-  }
-
-  @media (max-width: $screen-sm) {
-    @include gridItem(1, $gap-mobile)
-  }
-}
-
-</style>
+<style lang="scss" src="./ProductList.scss" module />

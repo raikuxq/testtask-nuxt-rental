@@ -6,13 +6,25 @@
       :image-url="getActiveVehicle.image"
       :title="getActiveVehicle.name"
       :price="getActiveVehicle.rent"
-      :specification-text="getActiveVehicle.specificationsText"
-      :team-text="getActiveVehicle.teamText"
-      :term-text="getActiveVehicle.termText"
-      :specification-features="getFeatures"
-      :team-members="getTeam"
-      :term-conditions="getTerms"
-    />
+    >
+      <template v-slot:info>
+        <nuxt-child
+          :key="$route.params.id"
+          :specifications-features="getFeatures"
+          :specifications-description="getActiveVehicle.specificationsText"
+        />
+        <nuxt-child
+          :key="$route.params.id"
+          :team-members="getTeam"
+          :team-description="getActiveVehicle.teamText"
+        />
+        <nuxt-child
+          :key="$route.params.id"
+          :terms-conditions="getTerms"
+          :terms-description="getActiveVehicle.termText"
+        />
+      </template>
+    </product-details>
   </transition>
 </template>
 

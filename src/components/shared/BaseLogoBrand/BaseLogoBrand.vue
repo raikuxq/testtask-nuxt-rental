@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'TheBrandLogo',
+  name: 'BaseLogoBrand',
   computed: {
     isDarkThemeActive () {
       return this.$nuxt.$colorMode.value === 'dark'
@@ -16,9 +16,4 @@ export default {
 }
 </script>
 
-<style lang="scss" module>
-.logo {
-  width: 100%;
-  height: 100%;
-}
-</style>
+<style lang="scss" src="./BaseLogoBrand.scss" module />

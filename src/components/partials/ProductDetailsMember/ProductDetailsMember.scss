@@ -1,40 +1,3 @@
-<template>
-  <div :class="$style.member">
-    <div :class="$style.picture">
-      <img :class="$style.pictureImg" v-lazy="imageUrl">
-    </div>
-    <div :class="$style.info">
-      <div :class="$style.name">
-        <h3>{{ name }}</h3>
-      </div>
-      <div :class="$style.description">
-        <p>{{ jobTitle }}</p>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'Member',
-  props: {
-    name: {
-      type: String,
-      required: true
-    },
-    jobTitle: {
-      type: String,
-      required: true
-    },
-    imageUrl: {
-      type: String,
-      required: true
-    }
-  }
-}
-</script>
-
-<style lang="scss" module>
 @import "~@/assets/style/variables/varibales.scss";
 @import "~@/assets/style/base/typography.scss";
 
@@ -82,4 +45,3 @@ $max-pic-width-adaptive: 132px;
 .name {
   margin-bottom: $offset-100;
 }
-</style>

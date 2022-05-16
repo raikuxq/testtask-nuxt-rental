@@ -1,0 +1,11 @@
+@import "~@/assets/style/form/input.scss";
+
+.inputText {
+  position: relative;
+}
+.input {
+  @extend %input;
+}
+.label {
+  @extend %input-label;
+}

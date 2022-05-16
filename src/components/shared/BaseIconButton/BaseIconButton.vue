@@ -1,5 +1,5 @@
 <template>
-  <button :class="[$style.button, ...getModifiers]" v-blur v-bind="$attrs">
+  <button :class="[$style.button, ...getModifiers]" v-bind="$attrs">
     <svg-icon
       :class="$style.icon"
       :name="icon"
@@ -32,70 +32,4 @@ export default {
 }
 </script>
 
-<style lang="scss" module>
-@import "~@/assets/style/variables/varibales.scss";
-@import "~@/assets/style/base/typography.scss";
-
-.button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  padding: 0;
-  background: none;
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-  user-select: none;
-  transition: $transition-s;
-  @media (max-width: $screen-md) {
-    width: 35px;
-    height: 35px;
-  }
-
-  &.hasText {
-    @media (min-width: $screen-xl-min) {
-      width: auto;
-    }
-  }
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  color: $color-base-200;
-  transition: $transition-s;
-  pointer-events: none;
-  @media (max-width: $screen-md) {
-    width: 20px;
-    height: 20px;
-  }
-
-  .button.hasText & {
-    @media (min-width: $screen-xl-min) {
-      margin: 0 $offset-200;
-    }
-  }
-}
-
-.icon,
-.text {
-  .button:hover & {
-    color: $color-base-600;
-  }
-}
-
-.text {
-  @extend %text;
-  display: flex;
-  align-items: center;
-  font-size: $font-size-m;
-  padding-right: $offset-50;
-  transition: $transition-s;
-  @media (max-width: $screen-xl) {
-    display: none;
-  }
-}
-</style>
+<style lang="scss" src="./BaseIconButton.scss" module />

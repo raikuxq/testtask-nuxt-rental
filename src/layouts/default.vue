@@ -21,11 +21,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import { Wormhole } from 'portal-vue'
 
 
-import TheHeader from '@/components/TheHeader'
+import TheHeader from '@/components/unique/TheHeader/TheHeader'
 
 export default {
   name: 'Layout',
@@ -46,8 +45,8 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "~@/assets/style/variables/varibales.scss";
-@import "~@/assets/style/utils/positioning.scss";
+@import "~assets/style/variables/varibales.scss";
+@import "~assets/style/utils/positioning.scss";
 
 $header-size: 56px;
 $header-offset: $offset-500;

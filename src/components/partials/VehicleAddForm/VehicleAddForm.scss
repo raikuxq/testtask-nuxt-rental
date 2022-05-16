@@ -1,0 +1,24 @@
+@import "~@/assets/style/form/input.scss";
+
+.addVehicle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  @media (max-width: $screen-md) {
+    align-items: flex-end;
+  }
+}
+
+.inner {
+  max-width: 600px;
+  width: 100%;
+  @media (max-width: $screen-md) {
+    max-width: none;
+  }
+}
+
+.formItem {
+  @extend %form-input;
+}

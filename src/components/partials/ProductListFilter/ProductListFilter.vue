@@ -36,7 +36,7 @@ export default {
     }
   },
   beforeDestroy () {
-    this.clearFilterType()
+    this.clearFilterType();
   },
   methods: {
     ...mapActions('vehicles', [
